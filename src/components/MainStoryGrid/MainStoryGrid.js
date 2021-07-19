@@ -6,6 +6,7 @@ import {
   OPINION_STORIES,
   SECONDARY_STORIES,
 } from '../../data';
+import { COLORS, QUERIES } from '../../constants'
 
 import SectionTitle from '../SectionTitle';
 import MainStory from '../MainStory';
@@ -66,6 +67,37 @@ const SecondaryStorySection = styled.section`
 const StoryList = styled.div`
   display: flex;
   flex-direction: column;
+
+  > a:not(:first-of-type) {
+    padding-top: 16px;
+  }
+
+  > a:not(:last-of-type) {
+    padding-bottom: 16px;
+    border-bottom: 1px solid ${COLORS.gray[300]};
+  }
+
+  @media ${QUERIES.tabletAndUp} {
+    > a:not(:first-of-type) {
+      padding-top: none;
+    }
+
+    > a:not(:last-of-type) {
+      padding-bottom: none;
+      border-bottom: none;
+    }
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    > a:not(:first-of-type) {
+      padding-top: 16px;
+    }
+
+    > a:not(:last-of-type) {
+      padding-bottom: 16px;
+      border-bottom: 1px solid ${COLORS.gray[300]};
+    }
+  }
 `;
 
 const OpinionSection = styled.section`
