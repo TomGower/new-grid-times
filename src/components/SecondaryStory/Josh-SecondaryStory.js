@@ -25,6 +25,8 @@ const Wrapper = styled.article`
   gap: 4px 16px;
   grid-template-columns: 120px 1fr;
   color: var(--color-gray-900);
+
+  /* this was added as part of the Exercise 3 solution */
   @media ${QUERIES.tabletOnly} {
     grid-template-areas:
       'image'
